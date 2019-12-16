@@ -1,0 +1,40 @@
+
+<br>
+<div style="text-align: center;">
+<h1>Quantidade de posts {{users.length}}</h1>
+</div>
+
+
+<div class="container" style="text-align: center;">
+    <div class="row">
+      <div class="col">
+       
+      </div>
+      <div class="col-10">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">User Id</th>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Body</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of usuarios">
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+              </tr>     
+            </tbody>
+          </table>
+      </div>
+      <div class="col">
+  
+      </div>
+    </div>
+  
+  </div>
+
+

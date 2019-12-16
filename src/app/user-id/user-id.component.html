@@ -1,0 +1,58 @@
+
+<div style="text-align: center;" class="container">
+<input id="txtUserId"  type="number" [(ngModel)]="id" (keyup) = "searchById()" />
+<button id="btn" (click)="searchById()">Consultar</button>
+<h3>Post - pesquisando por post ID</h3>
+</div>
+
+
+<div *ngIf="id != null ; else elseBlock"> <div style="text-align: center;" class="container">
+    <div class="row">
+      <div class="col">
+       
+      </div>
+      <div class="col-10">
+        <div class="card text-white bg-dark mb-3" style="max-width: 60rem;">
+            <div class="card-header">Post id {{user.id}}</div>
+            <div class="card-body">
+              <h5 class="card-title">{{user.title}}</h5>
+              <p class="card-text">{{user.body}}</p>
+            </div>
+          </div>
+
+        </div>
+      <div class="col">
+   
+      </div>
+    </div>
+   
+  </div></div>
+<ng-template #elseBlock>
+    <div style="text-align: center;" class="container">
+        <div class="row">
+          <div class="col">
+           
+          </div>
+          <div class="col-10">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60rem;">
+                <div class="card-header">Digite um numero</div>
+                <div class="card-body">
+                  <h5 class="card-title">Titulo da postagem</h5>
+                  <p class="card-text">Corpo da postagem</p>
+                </div>
+              </div>
+    
+                 </div>
+          <div class="col">
+       
+          </div>
+        </div>
+       
+      </div>
+</ng-template>
+
+ 
+
+
+
+
